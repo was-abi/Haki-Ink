@@ -20,6 +20,7 @@ const REVIEWS: Review[] = [
     status: "Finished",
     coverImage: "/covers/before_the_coffee_gets_cold_2.jpg",
     summary: "In a small back alley in Tokyo, a mysterious cafe offers its customers the chance to travel back in time, provided they return before their coffee gets cold.",
+    tags: ["Fiction", "Contemporary", "Japanese Lit"],
     content: `
 ## First Impressions
 
@@ -61,6 +62,7 @@ An essential read for anyone who has ever looked back with a "what if." It’s h
     status: "Finished",
     coverImage: "/covers/never_let_me_go.jpg",
     summary: "In an isolated boarding school, a group of students slowly discovers the heartbreaking truth about their shared destiny and the dark, utilitarian purpose behind their seemingly idyllic lives.",
+    tags: ["Fiction", "Sci-Fi", "Classic Lit"],
     content: `
 "Never Let Me Go" is a ghost story where the characters aren't dead yet. Ishiguro takes a high-concept sci-fi premise—children raised solely to serve as organ donors—and strips away the action to focus on the quiet, domestic life of the victims. It is a tragedy that doesn't scream; it whispers, making the eventual heartbreak feel much heavier.
 
@@ -101,6 +103,7 @@ This is a book that stays in your bones. It isn't a fast-paced thriller, but a s
     status: "Finished",
     coverImage: "/covers/death_on_gokumon_island.jpg",
     summary: "On the secluded Gokumon Island, scruffy detective Kosuke Kindaichi must decipher a dying man’s cryptic warning to protect three sisters from a series of gruesome, ritualistic murders rooted in a bitter family legacy.",
+    tags: ["Fiction", "Mystery", "Japanese Lit"],
     content: `
 ## First Impressions
 
@@ -141,6 +144,7 @@ This is a powerhouse of a murder mystery. It showcases the incredible potential 
     status: "Finished",
     coverImage: "/covers/picture-of-dorian-gray.png",
     summary: "In 19th-century England, a beautiful young man remains eternally youthful while his hidden portrait grotesquely withers and decays, bearing the physical scars of his descent into a life of sin and moral corruption.",
+    tags: ["Fiction", "Classic Lit"],
     content: `
 ## First Impressions
 
@@ -181,6 +185,7 @@ A masterpiece that is meant to be studied, highlighted, and debated. It is a bri
     status: "Finished",
     coverImage: "/covers/Stranger_Albert_Camus_1.png",
     summary: "In a sun-drenched Algiers, a detached and indifferent man is drawn into a senseless murder, ultimately facing his own execution while stubbornly embracing the cold, irrational absurdity of existence.",
+    tags: ["Fiction", "Classic Lit", "Philosophy"],
     content: `## First Impressions
 *The Stranger* is a chilling lesson in absurdity. It explores the "nakedness of man faced with the absurd"—the moment we realize the universe doesn't care about our morals or our meaning. Reading this as an adult is a far different experience than reading it as a student; Meursault no longer feels like a theoretical character, but like a reflection of the bleak, bottom-of-the-well nights we all try to forget.
 
@@ -225,6 +230,7 @@ A probing look into the folds of existence. It forces you to look at the indiffe
     status: "Currently Reading",
     coverImage: "/covers/crime_and_punishment.jpg",
     summary: "In the grim slums of St. Petersburg, a desperate former student commits a calculated murder to prove his superhuman superiority, only to find his sanity and soul slowly dismantled by the relentless weight of his own conscience.",
+    tags: ["Fiction", "Classic Lit", "Russian Lit"],
     content: `## First Impressions
 *Crime and Punishment* is a towering inferno of literature. It is an excruciatingly detailed psycho-epic that feels less like a book you read and more like a moment in your life you lived. Coming to this as an adult is a revelation; it’s no longer a "school assignment" but a haunting companion that shadows your own thoughts on morality, choice, and the crushing weight of a guilty conscience.
 
@@ -300,6 +306,15 @@ export default function ReviewPage({ params }: { params: { slug: string } }) {
               <div className="flex flex-col gap-2 text-center md:text-left">
                 <div className="flex flex-wrap items-center justify-center gap-2 md:justify-start">
                   <StatusBadge status={review.status} />
+                  {review.tags?.map((tag) => (
+                    <a
+                      key={tag}
+                      href={`/?category=${tag.toLowerCase().replace(/\s+/g, "-")}`}
+                      className="tag-pill"
+                    >
+                      {tag}
+                    </a>
+                  ))}
                 </div>
                 <h1 className="font-heading text-3xl font-bold text-[var(--color-primary)] text-balance">
                   {review.title}
@@ -338,7 +353,7 @@ export default function ReviewPage({ params }: { params: { slug: string } }) {
 
             {/* Sidebar — 1/3 */}
             <aside className="w-full lg:w-72 lg:flex-shrink-0">
-              <Sidebar />
+              <Sidebar reviews={REVIEWS} />
             </aside>
           </div>
         </div>

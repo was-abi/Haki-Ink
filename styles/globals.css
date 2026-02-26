@@ -92,8 +92,57 @@
     transition: color 0.2s;
   }
   .read-more:hover { color: var(--color-primary); }
+
+  /* Tag / genre pill — muted teal outline style */
+  .tag-pill {
+    display: inline-block;
+    color: var(--color-primary);
+    background-color: transparent;
+    border: 1px solid rgba(47, 76, 76, 0.3);
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 2px;
+    line-height: 1.6;
+    transition: background-color 0.15s, color 0.15s, border-color 0.15s;
+  }
+  .tag-pill:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: white;
+  }
 }
 
 @layer utilities {
   .text-balance { text-wrap: balance; }
+}
+
+/* ── Prose overrides for review article body ─────────────────────────────── */
+.prose blockquote {
+  border-left: 3px solid var(--color-secondary) !important;
+  border-top: none !important;
+  border-right: none !important;
+  border-bottom: none !important;
+  background-color: var(--color-bg-soft);
+  padding: 0.75rem 1.25rem !important;
+  margin: 1.5rem 0 !important;
+  border-radius: 0 3px 3px 0;
+  font-style: italic;
+  color: var(--color-primary) !important;
+}
+
+.prose blockquote p {
+  margin: 0 !important;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+}
+
+.prose h2 {
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--color-border);
+  margin-top: 2rem !important;
 }

@@ -10,6 +10,7 @@ export interface ReviewFrontmatter {
   status: ReviewStatus;
   coverImage: string;    // e.g. "/covers/gatsby.jpg"
   summary: string;       // 1–2 sentence hook for the grid
+  tags?: string[];       // genre/category tags e.g. ["Fiction", "Classic Lit"]
   draft?: boolean;       // if true, exclude from public pages
 }
 

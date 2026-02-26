@@ -5,7 +5,7 @@ import StarRating from "@/components/StarRating";
 import StatusBadge from "@/components/StatusBadge";
 
 export default function BookCard({ review }: { review: Review }) {
-  const { slug, title, author, rating, status, coverImage, summary, date } = review;
+  const { slug, title, author, rating, status, coverImage, summary, date, tags } = review;
 
   const formattedDate = new Date(date).toLocaleDateString("en-US", {
     month: "long",
@@ -17,7 +17,10 @@ export default function BookCard({ review }: { review: Review }) {
     <article className="group flex flex-col">
       {/* Cover image */}
       <Link href={`/reviews/${slug}`} className="block overflow-hidden" tabIndex={-1} aria-hidden="true">
-        <div className="relative aspect-[3/4] w-full overflow-hidden bg-[var(--color-bg-soft)]">
+        <div
+          className="relative aspect-[3/4] w-full overflow-hidden bg-[var(--color-bg-soft)]"
+          style={{ boxShadow: "0 4px 16px rgba(47,76,76,0.10), 0 1px 4px rgba(47,76,76,0.06)" }}
+        >
           <Image
             src={coverImage}
             alt={`Cover of ${title}`}
@@ -25,14 +28,28 @@ export default function BookCard({ review }: { review: Review }) {
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
           />
+          {/* Gradient overlay on hover */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
         </div>
       </Link>
 
+      {/* Colored bottom border accent — appears on hover */}
+      <div className="h-[2px] w-full bg-[var(--color-secondary)] scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100" />
+
       {/* Card body */}
       <div className="flex flex-col gap-2 pt-3">
-        {/* Status badge */}
-        <div>
+        {/* Status badge + tags */}
+        <div className="flex flex-wrap items-center gap-1.5">
           <StatusBadge status={status} />
+          {tags?.map((tag) => (
+            <Link
+              key={tag}
+              href={`/?category=${tag.toLowerCase().replace(/\s+/g, "-")}`}
+              className="tag-pill"
+            >
+              {tag}
+            </Link>
+          ))}
         </div>
 
         {/* Title */}
