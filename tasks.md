@@ -8,6 +8,7 @@ This document breaks down the PRD into actionable tasks organized by phase:
 4. **Logic & Interactivity** — Implement forms, API routes, and moderation
 5. **Polish & Deployment** — Performance, accessibility, and launch
 
+
 ---
 
 ## Phase 1: Project Setup

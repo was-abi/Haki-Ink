@@ -2,66 +2,98 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ─── Base Layer ─────────────────────────────────────────────────────────── */
 @layer base {
   :root {
-    --color-bg:       #F2F2F2;
-    --color-surface:  #FFFFFF;
-    --color-text:     #333333;
-    --color-heading:  #182E4B;
-    --color-accent:   #7FB082;
-    --color-border:   #E5E5E1;
+    --color-primary:   #2F4C4C;
+    --color-secondary: #CA6C68;
+    --color-blush:     #F0DCD5;
+    --color-text:      #1e1e1e;
+    --color-muted:     #6b7280;
+    --color-border:    #e5e0db;
+    --color-bg:        #ffffff;
+    --color-bg-soft:   #faf8f6;
+    --color-dark:      #1a2626;
   }
 
-  .dark {
-    --color-bg:       #0F0F0E;
-    --color-surface:  #1A1A18;
-    --color-text:     #F5F5F0;
-    --color-heading:  #F5F5F0;
-    --color-accent:   #7FB082;
-    --color-border:   #2A2A28;
-  }
-
-  html {
-    @apply scroll-smooth;
-  }
+  html { @apply scroll-smooth; }
 
   body {
     background-color: var(--color-bg);
     color: var(--color-text);
-    @apply font-body text-body antialiased;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-size: 1rem;
+    line-height: 1.625;
+    @apply antialiased;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading;
-    color: var(--color-heading);
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    color: var(--color-primary);
+    font-weight: 700;
   }
 
-  /* Focus ring for keyboard navigation */
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
   :focus-visible {
-    outline: 2px solid var(--color-accent);
+    outline: 2px solid var(--color-secondary);
     outline-offset: 2px;
+    border-radius: 2px;
   }
 }
 
-/* ─── Component Layer ─────────────────────────────────────────────────────── */
 @layer components {
-  .container-page {
-    @apply mx-auto w-full px-6 max-w-[1200px];
+  .site-container {
+    @apply mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8;
   }
 
-  .container-content {
-    @apply mx-auto w-full max-w-[65ch];
+  /* Orange/rust category pill */
+  .category-label {
+    display: inline-block;
+    background-color: var(--color-secondary);
+    color: white;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 2px;
+    line-height: 1.6;
   }
 
-  /* Star rating */
-  .star-filled { color: var(--color-accent); }
-  .star-empty  { color: var(--color-border); }
+  .star-filled { color: var(--color-secondary); }
+  .star-empty  { color: #d1c9c3; }
+
+  /* Sidebar widget heading with underline accent */
+  .sidebar-heading {
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-secondary);
+    padding-bottom: 8px;
+    margin-bottom: 14px;
+  }
+
+  /* "Read more →" link */
+  .read-more {
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+    transition: color 0.2s;
+  }
+  .read-more:hover { color: var(--color-primary); }
 }
 
-/* ─── Utilities ───────────────────────────────────────────────────────────── */
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+  .text-balance { text-wrap: balance; }
 }

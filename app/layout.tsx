@@ -1,21 +1,6 @@
 import type { Metadata } from "next";
-import { Roboto_Slab, Montserrat } from "next/font/google";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import "@/styles/globals.css";
-
-// Brand fonts from Haki & Ink guidelines
-const robotoSlab = Roboto_Slab({
-  subsets: ["latin"],
-  weight: ["600", "700"],
-  variable: "--font-roboto-slab",
-  display: "swap",
-});
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-montserrat",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: {
@@ -37,9 +22,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${robotoSlab.variable} ${montserrat.variable}`}>
-        {children}
+    <html lang="en">
+      <body>
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );
