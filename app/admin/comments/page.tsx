@@ -4,11 +4,11 @@
 type FilterStatus = "all" | "pending" | "approved" | "spam";
 
 const PLACEHOLDER_COMMENTS = [
-  { id: "1", slug: "the-great-gatsby",      name: "Alice M.",   comment: "This review perfectly captures what makes Gatsby so haunting.",      status: "approved", createdAt: "2026-02-20" },
-  { id: "2", slug: "the-great-gatsby",      name: "James K.",   comment: "I disagree about Nick being a reliable narrator.",                   status: "approved", createdAt: "2026-02-22" },
-  { id: "3", slug: "dune",                  name: "Omar S.",    comment: "Have you read the sequels? God Emperor is underrated.",               status: "pending",  createdAt: "2026-02-24" },
-  { id: "4", slug: "normal-people",         name: "Buy Ch3ap!", comment: "BUY CHEAP WATCHES AT www.spam.example.com!!!",                       status: "spam",     createdAt: "2026-02-23" },
-  { id: "5", slug: "the-brothers-karamazov", name: "Sofia R.", comment: "The Grand Inquisitor scene is the greatest thing in literature.",     status: "pending",  createdAt: "2026-02-25" },
+  { id: "1", slug: "before-the-coffee-gets-cold",      name: "Alice M.",   comment: "This review perfectly captures what makes Gatsby so haunting.",      status: "approved", createdAt: "2026-02-20" },
+  { id: "2", slug: "the-stranger",      name: "James K.",   comment: "I disagree about Nick being a reliable narrator.",                   status: "approved", createdAt: "2026-02-22" },
+  { id: "3", slug: "crime-and-punishment",                  name: "Omar S.",    comment: "Have you read the sequels? God Emperor is underrated.",               status: "pending",  createdAt: "2026-02-24" },
+  { id: "4", slug: "death-on-gokumon-island",         name: "Buy Ch3ap!", comment: "BUY CHEAP WATCHES AT www.spam.example.com!!!",                       status: "spam",     createdAt: "2026-02-23" },
+  { id: "5", slug: "never-let-me-go", name: "Sofia R.", comment: "The Grand Inquisitor scene is the greatest thing in literature.",     status: "pending",  createdAt: "2026-02-25" },
 ];
 
 const STATUS_STYLES: Record<string, string> = {

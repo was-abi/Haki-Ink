@@ -18,10 +18,10 @@ const CATEGORIES = [
 ];
 
 const RECENT_COVERS = [
-  { slug: "the-great-gatsby",      src: "https://placehold.co/120x160/182E4B/FFFFFF?text=Gatsby" },
-  { slug: "piranesi",              src: "https://placehold.co/120x160/4A6FA5/FFFFFF?text=Piranesi" },
-  { slug: "dune",                  src: "https://placehold.co/120x160/A0785A/FFFFFF?text=Dune" },
-  { slug: "normal-people",         src: "https://placehold.co/120x160/7FB082/182E4B?text=Normal" },
+  { slug: "before-the-coffee-gets-cold",      src: "/covers/before_the_coffee_gets_cold_2.jpg" },
+  { slug: "never-let-me-go",              src: "/covers/never_let_me_go.jpg" },
+  { slug: "death-on-gokumon-island",                  src: "/covers/death_on_gokumon_island.jpg" },
+  { slug: "the-stranger",         src: "/covers/Stranger_Albert_Camus_1.png" },
 ];
 
 export default function Sidebar() {
