@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Base Layer ─────────────────────────────────────────────────────────── */
+@layer base {
+  :root {
+    --color-bg:       #F2F2F2;
+    --color-surface:  #FFFFFF;
+    --color-text:     #333333;
+    --color-heading:  #182E4B;
+    --color-accent:   #7FB082;
+    --color-border:   #E5E5E1;
+  }
+
+  .dark {
+    --color-bg:       #0F0F0E;
+    --color-surface:  #1A1A18;
+    --color-text:     #F5F5F0;
+    --color-heading:  #F5F5F0;
+    --color-accent:   #7FB082;
+    --color-border:   #2A2A28;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    @apply font-body text-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+    color: var(--color-heading);
+  }
+
+  /* Focus ring for keyboard navigation */
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+}
+
+/* ─── Component Layer ─────────────────────────────────────────────────────── */
+@layer components {
+  .container-page {
+    @apply mx-auto w-full px-6 max-w-[1200px];
+  }
+
+  .container-content {
+    @apply mx-auto w-full max-w-[65ch];
+  }
+
+  /* Star rating */
+  .star-filled { color: var(--color-accent); }
+  .star-empty  { color: var(--color-border); }
+}
+
+/* ─── Utilities ───────────────────────────────────────────────────────────── */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
