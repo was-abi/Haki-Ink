@@ -10,17 +10,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // From --mv-trellis-color-primary / secondary in the reference site CSS
         site: {
-          primary:    "#2F4C4C", // dark teal — headings, nav, buttons
-          secondary:  "#CA6C68", // terracotta rust — accents, links, hover
-          blush:      "#F0DCD5", // --mv-trellis-color-background-accent
-          dark:       "#1a2626", // footer background
-          text:       "#1e1e1e",
-          muted:      "#6b7280",
-          border:     "#e5e0db",
-          bg:         "#ffffff",
-          "bg-soft":  "#faf8f6",
+          primary:      "#0A3200", // deep dark green — headings, nav, buttons
+          secondary:    "#379634", // forest green — accents, links, hover
+          mint:         "#74F2CE", // medium teal-green — highlights, badges
+          "mint-light": "#7CFFCB", // bright mint — hover states
+          "mint-pale":  "#BFFFF1", // lightest mint — backgrounds, soft areas
+          dark:         "#061a00", // deeper dark green — footer background
+          text:         "#0A3200", // body text
+          muted:        "#4a6741", // muted green
+          border:       "#c8f0e0", // light mint border
+          bg:           "#ffffff",
+          "bg-soft":    "#f4fff9", // very soft mint-white
         },
         // Haki & Ink brand (kept for logo tinting)
         brand: {
@@ -29,10 +30,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        // Century Gothic feel — --mv-trellis-font-body
-        body:    ['"Century Gothic"', "CenturyGothic", "AppleGothic", "sans-serif"],
-        // Futura feel — --mv-trellis-font-heading
-        heading: ["Futura", '"Trebuchet MS"', "Arial", "sans-serif"],
+        body:    ['"Inter"', "sans-serif"],
+        heading: ['"Playfair Display"', "Georgia", "serif"],
       },
       fontSize: {
         "xs":   ["0.834rem",  { lineHeight: "1.5" }],
@@ -50,8 +49,8 @@ const config: Config = {
         content: "720px",
       },
       boxShadow: {
-        card:        "0 2px 8px rgba(47,76,76,0.08), 0 1px 3px rgba(47,76,76,0.05)",
-        "card-hover":"0 6px 20px rgba(47,76,76,0.14), 0 2px 6px rgba(47,76,76,0.08)",
+        card:        "0 2px 8px rgba(10,50,0,0.08), 0 1px 3px rgba(10,50,0,0.05)",
+        "card-hover":"0 6px 20px rgba(10,50,0,0.14), 0 2px 6px rgba(10,50,0,0.08)",
       },
       borderRadius: {
         card: "4px",

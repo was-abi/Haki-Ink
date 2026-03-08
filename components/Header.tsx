@@ -4,12 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 
-const NAV_LINKS = [
-  { label: "Home",              href: "/" },
-  { label: "Reviews",           href: "/reviews" },
-  { label: "Currently Reading", href: "/?status=reading" },
-  { label: "About",             href: "/about" },
-];
+const NAV_LINKS = [];
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);

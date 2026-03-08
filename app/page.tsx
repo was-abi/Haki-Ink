@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BookCard from "@/components/BookCard";
 import Sidebar from "@/components/Sidebar";
+import QuoteBanner from "@/components/QuoteBanner";
 import StarRating from "@/components/StarRating";
 import StatusBadge from "@/components/StatusBadge";
 import type { Review } from "@/lib/types";
@@ -93,6 +94,8 @@ export default function HomePage() {
       <Header />
 
       <main>
+        <QuoteBanner />
+
         {/* ── Featured Hero ───────────────────────────────────────────── */}
         <section className="bg-[var(--color-bg-soft)] border-b border-[var(--color-border)]">
           <div className="site-container py-10">
