@@ -512,6 +512,117 @@ Find happiness in small things, success in big things, and divinity in all thing
 Follow one principle for 21 days. Start with 'Accelerate Transformation' or 'Bliss of Love'. Move to 'Spiritually Aligned' only once the others are integrated into your daily actions.
 `,
   },
+  {
+    slug: "the-metamorphosis",
+    title: "The Metamorphosis",
+    author: "Franz Kafka",
+    date: "2024-12-11",
+    rating: 5,
+    status: "Finished",
+    coverImage: "/covers/metamorphosis-nolan-noir.png",
+    summary: "A dog-sized beetle, a rotting apple, and the heartbreaking betrayal of a family—Kafka's masterpiece is the ultimate study in human pathos.",
+    tags: ["Fiction", "Classic Lit", "Existential"],
+    type: "review",
+    content: `## First Impressions
+*The Metamorphosis* is far more than an "entomological fantasy." As Nabokov suggests, it is a story of **beauty plus pity**—the only true definition of art. It's the tale of Gregor Samsa, a man who wakes up as a monstrous insect, but the real horror isn't his new body; it's the "insect souls" of the family surrounding him. It is a stark, black-and-white nightmare told with the precise, ironic language of a legal document.
+
+## The Cast of the Segmented Flat
+- **Gregor Samsa:** A convex, brown, dog-sized beetle. Despite his hard carapace, he retains a sweet, subtle human heart—one that unfortunately never realizes it has wings hidden under its wing-cases.
+- **Grete (The Sister):** Initially a caregiver, she eventually becomes the villain. She is the "cruel emblem of health" who first suggests that the creature is no longer her brother.
+- **The Father:** A man who reaches a summit of brutal power in his bank messenger uniform, using apples as "little red bombs" to drive his son into a state of decay.
+- **The Three Lodgers:** Bearded, mechanical automatons who value superficial tidiness over human life. They are "shabby in the sun," puppets who flee when faced with reality.
+
+## The Mechanics of Betrayal
+The story is built on a rigid, logical **Trinity**. There are three parts, three doors, and three Samsas. The logic is inescapable: Gregor is a human in a bug's disguise, while his family are insects disguised as humans. As Gregor becomes more "beetle-like" by crawling on walls, his family becomes more parasitic, fattening themselves on his previous sacrifices until they are strong enough to let him die.
+
+## The Emotional Core
+The "music scene" is the moment that truly breaks the reader. Gregor, covered in dust and remnants of food, is drawn out by the sound of his sister's violin. He asks the haunting question: *"Was he an animal, that music had such an effect upon him?"* He craves a "nourishment" that isn't food—he craves love and recognition—but instead receives a final, absolute betrayal that leads to his peaceful, vacant end.
+
+## The "Vibrating" Lines
+These four quotes capture the sensation of the story that you can neither define nor dismiss:
+
+> "As Gregor Samsa awoke one morning from a troubled dream he found himself transformed in his bed into a monstrous insect."
+
+> "Was he an animal, that music had such an effect upon him? He felt as if the way were opening before him to the unknown nourishment he craved."
+
+> "I won't utter my brother's name in the presence of this creature, and so all I say is: we must try to get rid of it."
+
+> "He thought of his family with tenderness and love. The decision that he must disappear was one that he held to even more strongly than his sister."
+
+## Themes
+* **The Parasitism of Mediocrity:** How a "healthy" family can feed on the soul of a "genius" or an outlier.
+* **The Door Theme:** The constant, rhythmic opening and closing of doors as a barrier between the fantastic and the philistine.
+* **The Wings We Forget:** A reminder that many "Gregors" die without realizing they have the wings to fly out of their own cages.
+* **Objective vs. Subjective Reality:** The idea that reality is just a "drop" of a million individual, often mad, subjective worlds mixed together.
+
+## Verdict
+Kafka is the greatest German writer of our time, and this is his most poignant work. It is a story that requires you to have a certain "gene" or "cell" that vibrates in response to its beauty. If you can feel pity for a giant beetle with a rotting apple stuck in its back, you have joined the ranks of the great readers. **A masterpiece of the absurd.**
+
+---
+
+*Do you think Gregor's transformation was physical, or was it just the ultimate expression of his isolation? Let's discuss in the comments below.*`,
+  },
+  {
+    slug: "american-psycho-critique",
+    title: "American Psycho: A Masterpiece You'll Never Re-read",
+    author: "Bret Easton Ellis",
+    date: "2026-03-09",
+    rating: 5,
+    status: "Finished",
+    coverImage: "/covers/american-psycho.png",
+    summary: "Bret Easton Ellis's American Psycho is not a book to read for pleasure—it is a seminal work that shines a harsh, brutal light on 1980s consumerism and the total loss of empathy.",
+    tags: ["Literary Critique", "Pop Culture", "Philosophy"],
+    type: "review",
+    content: `## The Hollow Man and the High Life
+
+It began with a dinner in Manhattan—a night that felt like a slow-motion car crash of vanity. I was catching up with Jason, an old high school buddy turned Wall Street fixture, and our friend Lisa. For eighty minutes, I sat through a grueling breakdown of Blackberry features, Zagat restaurant guides, and glib gossip about people we hadn't seen in a decade.
+
+It was a night of "sick pads," Johnnie Walker Blue Label, and a jarringly casual detachment from reality that culminated in a hooker storming out because Jason was offended she took a phone call while performing a certain act. It was a moment of hollow revelation: what he wanted her to "get off" of wasn't the furniture, but her phone.
+
+Returning from a vineyard wedding in Napa recently—a weekend fueled by coked-out "eightballs" and conversations about private helicopters—I picked up Bret Easton Ellis's American Psycho again. I realized then that Ellis's work isn't an exaggeration; it is a controlled, hilarious, and horrifyingly honest mirror of a culture that actually exists.
+
+## The Personification of Nothing
+
+American Psycho is a visceral, disturbingly dark portrait of the 1980s as an emotionally vacuous bastion of consumerism. It deals brilliantly with the total loss of empathy. The protagonist, Patrick Bateman, is the personification of this void—he is outwardly charming and normal, with every outward sign of status, but inside, there is absolutely nothing.
+
+The book clobbers the reader with a "Warholian" repetition of brand names—Ermenegildo Zegna suits, Tumi wallets, and Bottega Veneta attaches. Through Bateman's distorted lens, the world is viewed through specific products and status symbols. It is a satirical indictment of a period where humans were reduced to the brands they wore.
+
+## A Descent into Dread
+
+While the first half functions as a brilliant, pitch-black satire, the second half descends into a visceral nightmare.
+
+### The Sociopathic Lens
+What makes the narrative truly unsettling is the inner monologue of a man totally immune to pleas for mercy and devoid of human emotion.
+
+### Graphic Realism
+Bateman describes each grisly atrocity in a detached, first-person narrative that is as disturbing as anything you can imagine.
+
+### Transcendence through Dread
+Ellis creates a sense of profound dread that transcends simple social commentary, leaving the reader with a "WOW" experience that is both good and terrifying.
+
+## The Great Debate: Misogyny or Mirror?
+
+The book is often charged with being "woman-hating," but it is arguably a book about and for a culture that hates women.
+
+### Objectification
+Bateman deconstructs women into parts—boobs, ass, and vagina—until they are reduced to a mere sum of their anatomy.
+
+### The Reader's Responsibility
+Unlike traditional literature that offers a "moral voice" or a "way out," Ellis refuses to provide one. The moral alternative must come from the reader herself.
+
+### A Critique of Pop Culture
+The book challenges readers to consider why Bateman's violence is deemed offensive while "panty-sniffing" television shows like Law & Order: SVU are ingested as light entertainment.
+
+## The Verdict: A Masterpiece You'll Never Re-read
+
+Be warned: this is not a book to read for pleasure. For some, the repetitive, emotionally-detached listing of designer brands and pornographic sessions can even feel boring or dull. It is impossible to form an emotional connection with any character because Bateman is incapable of having one himself.
+
+However, this is an important work—a seminal novel that shines a harsh, brutal light on a mindset that has become all too familiar over time. It is a book I would rate 5 stars, yet I have no intention of ever reading it again. It is a work of "transcendence through dread" that demands your attention, provided your brain can handle the "gut-wrenching" heat.
+
+---
+
+*What's your take on American Psycho? Is it a critique of consumerism or an endorsement of it? Share your thoughts in the comments below.*`,
+  },
 ];
 
 export async function generateStaticParams() {

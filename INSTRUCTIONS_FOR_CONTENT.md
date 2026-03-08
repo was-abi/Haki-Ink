@@ -71,7 +71,9 @@ Add a new object to the `REVIEWS` array in `app/page.tsx`:
 ### Featured Section Display (Reviews Only)
 When a review is featured:
 - Shows as "Latest Review" (not "Latest Post")
-- Cover image: Portrait aspect (3:4), 48-56px width with frame effect
+- Cover image: **Portrait aspect (3:4)** — NOT 16:9
+  - Image dimensions: 48-56px width with frame effect on featured section
+  - Actual cover file should be 3:4 ratio (e.g., 600×800px)
 - Includes author byline with decorative accent line
 - Shows star rating
 - Includes status badge
@@ -147,10 +149,12 @@ Add a new object to the `REVIEWS` array in `app/page.tsx`:
 ### Featured Section Display (Blog Posts Only)
 When a blog post is featured:
 - Shows as "Latest Post" (not "Latest Review")
-- Cover image: Landscape aspect (16:9), full-width centered with `md:max-w-2xl` constraint
+- Cover image: **Landscape aspect (16:9)** — NOT 3:4
+  - Image dimensions: Full-width on featured section, centered with `md:max-w-2xl` constraint
+  - Actual cover file should be 16:9 ratio (e.g., 1792×1024px)
 - NO author byline
 - NO star rating
-- NO status badge
+- NO status badge (shows "Blog Post" mint label instead)
 - Layout: Vertical stack (full-width on desktop)
 - Title larger and centered
 - Decorative divider under title

@@ -97,13 +97,41 @@ const REVIEWS: Review[] = [
     type: "blog",
     content: "Placeholder - see blog detail page for full content",
   },
+  {
+    slug: "the-metamorphosis",
+    title: "The Metamorphosis",
+    author: "Franz Kafka",
+    date: "2024-12-11",
+    rating: 5,
+    status: "Finished",
+    coverImage: "/covers/metamorphosis-nolan-noir.png",
+    summary: "A dog-sized beetle, a rotting apple, and the heartbreaking betrayal of a family—Kafka's masterpiece is the ultimate study in human pathos.",
+    tags: ["Fiction", "Classic Lit", "Existential"],
+    content: "",
+  },
+  {
+    slug: "american-psycho-critique",
+    title: "American Psycho: A Masterpiece You'll Never Re-read",
+    author: "Bret Easton Ellis",
+    date: "2026-03-09",
+    rating: 5,
+    status: "Finished",
+    coverImage: "/covers/american-psycho.png",
+    summary: "Bret Easton Ellis's American Psycho is not a book to read for pleasure—it is a seminal work that shines a harsh, brutal light on 1980s consumerism and the total loss of empathy.",
+    tags: ["Literary Critique", "Pop Culture", "Philosophy"],
+    type: "review",
+    content: "",
+  },
 ];
 
 // Feature the most recently updated post
 const featured = REVIEWS.reduce((latest, current) =>
   new Date(current.date) > new Date(latest.date) ? current : latest
 );
-const rest = REVIEWS.filter(review => review.slug !== featured.slug);
+// Sort remaining posts by date (newest first)
+const rest = REVIEWS.filter(review => review.slug !== featured.slug).sort(
+  (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+);
 
 export default function HomePage() {
   return (
