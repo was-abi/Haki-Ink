@@ -1,6 +1,7 @@
 // ─── Review (sourced from MDX frontmatter) ───────────────────────────────────
 
 export type ReviewStatus = "Currently Reading" | "Finished" | "DNF";
+export type PostType = "review" | "blog";
 
 export interface ReviewFrontmatter {
   title: string;
@@ -11,6 +12,7 @@ export interface ReviewFrontmatter {
   coverImage: string;    // e.g. "/covers/gatsby.jpg"
   summary: string;       // 1–2 sentence hook for the grid
   tags?: string[];       // genre/category tags e.g. ["Fiction", "Classic Lit"]
+  type?: PostType;       // "review" (book) or "blog" (article) — defaults to "review"
   draft?: boolean;       // if true, exclude from public pages
 }
 

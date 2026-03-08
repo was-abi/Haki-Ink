@@ -4,7 +4,7 @@ import Image from "next/image";
 const FOOTER_LINKS = {
   "Navigate": [
     { label: "Home",              href: "/" },
-    { label: "All Reviews",       href: "/reviews" },
+    { label: "All Reviews",       href: "/blog" },
     { label: "Currently Reading", href: "/?status=reading" },
     { label: "About",             href: "/about" },
   ],

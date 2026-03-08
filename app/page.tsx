@@ -81,6 +81,20 @@ const REVIEWS: Review[] = [
     coverImage: "/covers/crime_and_punishment.jpg",
     summary: "In the grim slums of St. Petersburg, a desperate former student commits a calculated murder to prove his superhuman superiority, only to find his sanity and soul slowly dismantled by the relentless weight of his own conscience.",
     tags: ["Fiction", "Classic Lit", "Russian Lit"],
+    type: "review",
+    content: "",
+  },
+  {
+    slug: "path-to-personal-transformation",
+    title: "The Path to Personal Transformation and Spiritual Alignment",
+    author: "",
+    date: "2026-03-08",
+    rating: 0,
+    status: "Finished",
+    coverImage: "/covers/transformation.png",
+    summary: "33 principles across transformation, love, and spiritual alignment — a distilled guide to living with purpose, depth, and surrender.",
+    tags: ["Self-Help", "Spirituality", "Philosophy"],
+    type: "blog",
     content: "",
   },
 ];
@@ -101,7 +115,7 @@ export default function HomePage() {
           <div className="site-container py-10">
             <div className="group flex flex-col gap-6 md:flex-row md:items-center md:gap-10">
               {/* Cover */}
-              <Link href={`/reviews/${featured.slug}`} className="mx-auto flex-shrink-0 md:mx-0" tabIndex={-1} aria-hidden="true">
+              <Link href={`/blog/${featured.slug}`} className="mx-auto flex-shrink-0 md:mx-0" tabIndex={-1} aria-hidden="true">
                 <div className="relative aspect-[2/3] w-48 overflow-hidden rounded-[4px] md:w-56" style={{boxShadow:"0 8px 32px rgba(47,76,76,0.18), 0 2px 8px rgba(202,108,104,0.12)"}}>
                   <Image
                     src={featured.coverImage}
@@ -130,7 +144,7 @@ export default function HomePage() {
                   ))}
                 </div>
                 <h1 className="font-heading text-3xl font-bold leading-tight text-[var(--color-primary)] text-balance">
-                  <Link href={`/reviews/${featured.slug}`} className="transition-colors hover:text-[var(--color-secondary)]">
+                  <Link href={`/blog/${featured.slug}`} className="transition-colors hover:text-[var(--color-secondary)]">
                     {featured.title}
                   </Link>
                 </h1>
@@ -141,7 +155,7 @@ export default function HomePage() {
                 <p className="font-body text-sm leading-relaxed text-[var(--color-text)] max-w-[55ch]">
                   {featured.summary}
                 </p>
-                <Link href={`/reviews/${featured.slug}`} className="read-more self-center md:self-start">Read Full Review →</Link>
+                <Link href={`/blog/${featured.slug}`} className="read-more self-center md:self-start">Read Full Review →</Link>
               </div>
             </div>
           </div>

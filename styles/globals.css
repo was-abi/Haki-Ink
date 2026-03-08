@@ -67,6 +67,21 @@
     line-height: 1.6;
   }
 
+  /* Blog post label — mint green */
+  .blog-label {
+    display: inline-block;
+    background-color: var(--color-mint);
+    color: var(--color-primary);
+    font-family: "Inter", sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 2px;
+    line-height: 1.6;
+  }
+
   .star-filled { color: var(--color-secondary); }
   .star-empty  { color: #b0d4c0; }
 

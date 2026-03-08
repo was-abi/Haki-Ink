@@ -36,7 +36,7 @@ export default function Sidebar({ reviews = [] }: { reviews?: Review[] }) {
         <p className="sidebar-heading">Recently Reviewed</p>
         <div className="grid grid-cols-4 gap-2">
           {recentCovers.map((c) => (
-            <Link key={c.slug} href={`/reviews/${c.slug}`} className="block overflow-hidden rounded-[3px]">
+            <Link key={c.slug} href={`/blog/${c.slug}`} className="block overflow-hidden rounded-[3px]">
               <div className="relative aspect-[3/4]">
                 <Image src={c.coverImage} alt={`Cover of ${c.title}`} fill className="object-cover transition-transform duration-300 hover:scale-105" />
               </div>
@@ -52,7 +52,7 @@ export default function Sidebar({ reviews = [] }: { reviews?: Review[] }) {
           {recentPosts.map((post) => (
             <li key={post.slug} className="py-2.5">
               <Link
-                href={`/reviews/${post.slug}`}
+                href={`/blog/${post.slug}`}
                 className="block font-heading text-sm font-bold text-[var(--color-primary)] transition-colors hover:text-[var(--color-secondary)]"
               >
                 {post.title}

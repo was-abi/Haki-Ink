@@ -5,7 +5,7 @@ import StarRating from "@/components/StarRating";
 import StatusBadge from "@/components/StatusBadge";
 
 export default function BookCard({ review }: { review: Review }) {
-  const { slug, title, author, rating, status, coverImage, summary, date, tags } = review;
+  const { slug, title, author, rating, status, coverImage, summary, date, tags, type } = review;
 
   const formattedDate = new Date(date).toLocaleDateString("en-US", {
     month: "long",
@@ -13,19 +13,21 @@ export default function BookCard({ review }: { review: Review }) {
     year: "numeric",
   });
 
+  const isBlogPost = type === "blog";
+
   return (
-    <article className="group flex flex-col">
+    <article className={`group flex flex-col ${isBlogPost ? "sm:col-span-2" : ""}`}>
       {/* Cover image */}
-      <Link href={`/reviews/${slug}`} className="block overflow-hidden" tabIndex={-1} aria-hidden="true">
+      <Link href={`/blog/${slug}`} className="block overflow-hidden" tabIndex={-1} aria-hidden="true">
         <div
-          className="relative aspect-[3/4] w-full overflow-hidden bg-[var(--color-bg-soft)]"
+          className={`relative overflow-hidden bg-[var(--color-bg-soft)] ${isBlogPost ? "aspect-video" : "aspect-[3/4]"}`}
           style={{ boxShadow: "0 4px 16px rgba(47,76,76,0.10), 0 1px 4px rgba(47,76,76,0.06)" }}
         >
           <Image
             src={coverImage}
             alt={`Cover of ${title}`}
             fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            sizes={isBlogPost ? "(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw" : "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"}
             className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
           />
           {/* Gradient overlay on hover */}
@@ -40,7 +42,11 @@ export default function BookCard({ review }: { review: Review }) {
       <div className="flex flex-col gap-2 pt-3">
         {/* Status badge + tags */}
         <div className="flex flex-wrap items-center gap-1.5">
-          <StatusBadge status={status} />
+          {isBlogPost ? (
+            <span className="blog-label">Blog Post</span>
+          ) : (
+            <StatusBadge status={status} />
+          )}
           {tags?.map((tag) => (
             <Link
               key={tag}
@@ -55,7 +61,7 @@ export default function BookCard({ review }: { review: Review }) {
         {/* Title */}
         <h2 className="font-heading text-xl font-bold leading-tight text-[var(--color-primary)] text-balance">
           <Link
-            href={`/reviews/${slug}`}
+            href={`/blog/${slug}`}
             className="transition-colors hover:text-[var(--color-secondary)]"
           >
             {title}
@@ -63,13 +69,15 @@ export default function BookCard({ review }: { review: Review }) {
         </h2>
 
         {/* Author */}
-        <p className="font-heading text-[0.7rem] font-bold uppercase tracking-widest text-[var(--color-secondary)]">
-          by {author}
-        </p>
+        {!isBlogPost && (
+          <p className="font-heading text-[0.7rem] font-bold uppercase tracking-widest text-[var(--color-secondary)]">
+            by {author}
+          </p>
+        )}
 
         {/* Stars + date */}
         <div className="flex items-center justify-between">
-          <StarRating rating={rating} size="sm" />
+          {!isBlogPost && <StarRating rating={rating} size="sm" />}
           <span className="font-body text-xs text-[var(--color-muted)]">{formattedDate}</span>
         </div>
 
@@ -79,7 +87,7 @@ export default function BookCard({ review }: { review: Review }) {
         </p>
 
         {/* Read more */}
-        <Link href={`/reviews/${slug}`} className="read-more mt-1 self-start">
+        <Link href={`/blog/${slug}`} className="read-more mt-1 self-start">
           Read More →
         </Link>
       </div>
