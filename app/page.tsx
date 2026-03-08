@@ -114,12 +114,16 @@ export default function HomePage() {
         <QuoteBanner />
 
         {/* ── Featured Hero ───────────────────────────────────────────── */}
-        <section className="relative overflow-hidden bg-gradient-to-br from-[var(--color-bg-soft)] via-white to-[var(--color-mint-pale)]/20 border-b border-[var(--color-border)]">
-          {/* Decorative gradient border accent */}
-          <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[var(--color-primary)] via-[var(--color-secondary)] to-[var(--color-mint)]" />
+        <section className="bg-white py-10 md:py-14">
+          <div className="site-container">
+            {/* Card wrapper with light green background */}
+            <div className="relative rounded-xl overflow-hidden" style={{backgroundColor: "var(--color-mint-pale)", border: "1px solid var(--color-border)"}}>
+              {/* Decorative top border accent */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[var(--color-primary)] via-[var(--color-secondary)] to-[var(--color-mint)]" />
 
-          <div className="site-container py-12 md:py-16">
-            <div className={`group flex flex-col gap-8 ${featured.type === "blog" ? "md:flex-col md:items-center" : "md:flex-row md:items-center"} md:gap-12`}>
+              {/* Inner padding container */}
+              <div className="p-8 md:p-12">
+                <div className={`group flex flex-col gap-8 ${featured.type === "blog" ? "md:flex-col md:items-center" : "md:flex-row md:items-center"} md:gap-12`}>
               {/* Cover with frame effect */}
               <Link href={`/blog/${featured.slug}`} className={`flex-shrink-0 relative ${featured.type === "blog" ? "w-full md:max-w-2xl" : ""}`} tabIndex={-1} aria-hidden="true">
                 {/* Decorative frame background */}
@@ -143,7 +147,7 @@ export default function HomePage() {
               {/* Text content with enhanced typography */}
               <div className={`flex flex-col gap-4 ${featured.type === "blog" ? "text-center" : "md:text-left"}`}>
                 {/* Label section with enhanced styling */}
-                <div className="flex flex-wrap items-center justify-center gap-3 md:justify-start">
+                <div className={`flex flex-wrap items-center gap-3 ${featured.type === "blog" ? "justify-center" : "justify-center md:justify-start"}`}>
                   <span className={`inline-block px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest transition-all duration-300 ${featured.type === "blog" ? "bg-[var(--color-mint)] text-[var(--color-primary)] shadow-md shadow-[var(--color-mint)]/20 group-hover:shadow-lg group-hover:shadow-[var(--color-mint)]/30" : "bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-secondary)] text-white shadow-md shadow-[var(--color-primary)]/20 group-hover:shadow-lg group-hover:shadow-[var(--color-primary)]/30"}`}>
                     {featured.type === "blog" ? "Latest Post" : "Latest Review"}
                   </span>
@@ -181,19 +185,21 @@ export default function HomePage() {
                 )}
 
                 {/* Summary with improved typography */}
-                <p className="font-body text-base leading-relaxed text-[var(--color-text)]/90 max-w-[60ch] mt-1">
+                <p className={`font-body text-base leading-relaxed text-[var(--color-text)]/90 mt-1 ${featured.type === "blog" ? "mx-auto max-w-[55ch]" : "max-w-[60ch]"}`}>
                   {featured.summary}
                 </p>
 
                 {/* CTA Button with enhanced styling */}
-                <div className={`pt-2 ${featured.type === "blog" ? "" : "md:self-start"}`}>
-                  <Link href={`/blog/${featured.slug}`} className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[var(--color-secondary)] to-[var(--color-secondary)]/80 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-[var(--color-secondary)]/30 hover:translate-y-[-2px] active:translate-y-0 active:shadow-md group/btn">
+                <div className={`pt-4 ${featured.type === "blog" ? "flex justify-center" : "md:self-start"}`}>
+                  <Link href={`/blog/${featured.slug}`} className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[var(--color-secondary)] via-[var(--color-secondary)] to-[#2a6a29] text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-xl hover:shadow-[var(--color-secondary)]/40 hover:translate-y-[-2px] active:translate-y-0 active:shadow-lg group/btn" style={{boxShadow: "0 6px 20px rgba(55,150,52,0.3), 0 2px 8px rgba(55,150,52,0.2)"}}>
                     <span>{featured.type === "blog" ? "Read Full Post" : "Read Full Review"}</span>
                     <svg className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                     </svg>
                   </Link>
                 </div>
+              </div>
+            </div>
               </div>
             </div>
           </div>

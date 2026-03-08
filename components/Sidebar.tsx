@@ -27,7 +27,7 @@ export default function Sidebar({ reviews = [] }: { reviews?: Review[] }) {
       <div className="rounded-[4px] bg-[var(--color-blush)] p-5 border-t-2 border-[var(--color-secondary)]">
         <p className="sidebar-heading">About This Blog</p>
         <p className="font-body text-sm leading-relaxed text-[var(--color-text)]">
-          Haki &amp; Ink is a personal reading journal — honest reviews, careful reads, and a growing shelf of stories worth talking about.
+          Haki &amp; Ink is a personal space for books, ideas, and growth — featuring thoughtful book reviews, explorations on personal transformation, and essays on the topics that matter.
         </p>
       </div>
 
@@ -47,7 +47,7 @@ export default function Sidebar({ reviews = [] }: { reviews?: Review[] }) {
 
       {/* Recent posts list */}
       <div>
-        <p className="sidebar-heading">Latest Reviews</p>
+        <p className="sidebar-heading">Latest Updates</p>
         <ul className="flex flex-col divide-y divide-[var(--color-border)]">
           {recentPosts.map((post) => (
             <li key={post.slug} className="py-2.5">
