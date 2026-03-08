@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 
-const NAV_LINKS = [];
+const NAV_LINKS: { href: string; label: string }[] = [];
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
