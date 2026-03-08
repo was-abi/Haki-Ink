@@ -355,15 +355,15 @@ export default function ReviewPage({ params }: { params: { slug: string } }) {
 
       <main>
         {/* Hero band */}
-        <div className="bg-[var(--color-bg-soft)] border-b border-[var(--color-border)]" style={{paddingTop: isBlogPost ? "0" : "2rem", paddingBottom: isBlogPost ? "0" : "2rem"}}>
-          <div className={isBlogPost ? "" : "site-container"}>
-            <div className={isBlogPost ? "flex flex-col" : "flex flex-col gap-6 md:flex-row md:items-start md:gap-8"} style={isBlogPost ? {padding: "0"} : {}}>
+        <div className="bg-[var(--color-bg-soft)] border-b border-[var(--color-border)] py-8">
+          <div className="site-container">
+            <div className={isBlogPost ? "flex flex-col gap-6" : "flex flex-col gap-6 md:flex-row md:items-start md:gap-8"}>
 
               {/* Cover */}
               {isBlogPost ? (
-                <div className="relative w-full overflow-hidden rounded-none" style={{aspectRatio: "16/9", height: "auto"}}>
+                <div className="relative w-full sm:w-auto overflow-hidden rounded-[4px]" style={{aspectRatio: "16/9", maxWidth: "800px"}}>
                   <Image src={review.coverImage} alt={`Cover of ${review.title}`} fill
-                    sizes="100vw" className="object-cover" priority />
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 800px" className="object-cover" priority />
                 </div>
               ) : (
                 <div className="relative mx-auto aspect-[2/3] w-36 flex-shrink-0 overflow-hidden rounded-[4px] shadow-card-hover md:mx-0 md:w-44">
@@ -373,7 +373,7 @@ export default function ReviewPage({ params }: { params: { slug: string } }) {
               )}
 
               {/* Meta */}
-              <div className={`flex flex-col gap-2 ${isBlogPost ? "w-full px-4 md:px-8 py-6" : "text-center md:text-left"}`}>
+              <div className="flex flex-col gap-2 text-center md:text-left">
                 <div className="flex flex-wrap items-center justify-center gap-2 md:justify-start">
                   {isBlogPost ? (
                     <span className="blog-label">Blog Post</span>
