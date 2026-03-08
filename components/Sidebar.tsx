@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Review } from "@/lib/types";
+import SubscribeForm from "./SubscribeForm";
 
 export default function Sidebar({ reviews = [] }: { reviews?: Review[] }) {
   const sorted = [...reviews].sort(
@@ -98,14 +99,7 @@ export default function Sidebar({ reviews = [] }: { reviews?: Review[] }) {
         <p className="mb-3 font-body text-sm text-[var(--color-text)]">
           Get new reviews in your inbox.
         </p>
-        <input
-          type="email"
-          placeholder="your@email.com"
-          className="mb-2 w-full rounded-[3px] border border-[var(--color-border)] bg-white px-3 py-2 font-body text-sm focus:border-[var(--color-secondary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-secondary)]/30"
-        />
-        <button className="w-full rounded-[3px] bg-[var(--color-secondary)] px-4 py-2 font-heading text-[0.65rem] font-bold uppercase tracking-widest text-white transition-colors hover:bg-[var(--color-primary)] active:scale-[0.98]">
-          Subscribe
-        </button>
+        <SubscribeForm />
       </div>
 
     </aside>
