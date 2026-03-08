@@ -7,6 +7,7 @@ import Sidebar from "@/components/Sidebar";
 import StarRating from "@/components/StarRating";
 import StatusBadge from "@/components/StatusBadge";
 import CommentSection from "@/components/CommentSection";
+import TransformationBlogContent from "@/components/TransformationBlogContent";
 import ReactMarkdown from "react-markdown";
 import type { Review } from "@/lib/types";
 
@@ -282,47 +283,233 @@ This is not an easy hill to climb, but it is a worthwhile one. It is a masterpie
     tags: ["Self-Help", "Spirituality", "Philosophy"],
     type: "blog",
     content: `
+## Personal Journey
+
+For a long time, I felt like I was running on a treadmill—moving fast, exhausted, but ultimately going nowhere. I lacked the fundamental clarity on how to actually live life rather than just survive it. That changed when I met Mahatria. Through his 'This and That' program—a rigorous journey of 12 sessions, each spanning 2 hours—I was forced to look into a mirror and face the raw, uncomfortable truths about my own 'stuckness'. Mahatria didn't just give me theories; he gave me a blueprint for living in light.
+
+These 33 principles are the result of that coaching. They are raw, they are challenging, and they require a level of vulnerability I wasn't used to showing. I've learned that implementing all of these at once is impossible; instead, pick one principle and follow it religiously for 21 days before moving to the next. I suggest starting with 'Transformation' or 'Love' before advancing to 'Spiritual Alignment'.
+
+---
+
 ## 11 Ways to Accelerate Transformation
 
-1. Transformation is fundamentally about evolving your consciousness.
-2. Understand that 1% of the process is knowing, while 99% is the actual implementation.
-3. Begin from exactly where you are, focusing not on what you have, but on what you do with what you have.
-4. Small progress, when started with sustained effort, eventually leads to humongous possibilities.
-5. Desires only become deservingness through C.D.S.I.E: Consistent Directed Self-Motivated Intelligent Effort.
-6. Transformation requires the willingness to grow from your 'comfort zone' into your 'growth zone' via uncomfortable transitions.
-7. Realize an altitudinal breakthrough: once attitudes are shaped, they become behaviors that either create or destroy you.
-8. You are the co-author of your destiny; the beliefs you hold at the start define the entire journey.
-9. Life is your sole responsibility; no blaming of others is allowed.
-10. What you manifest is determined by the direction of your intelligence.
-11. Practice 'Dynamic Acceptance' (A.C.R.) by accepting the unchangeable, changing the changeable, and removing yourself from the unacceptable.
+**Focus on these to shift your internal state and take ownership of your results.**
+
+### 1. Evolving Consciousness
+
+Real transformation isn't about changing your external circumstances; it's about evolving how you perceive and process the world.
+
+*Example:* Instead of changing jobs because of a 'bad boss,' you change your mindset to see every interaction as a lesson in leadership.
+
+### 2. 1% Knowing, 99% Implementation
+
+Knowledge without action is just data; implementation is where the life change actually happens.
+
+*Example:* Knowing that a morning routine is healthy is the 1%; actually getting out of bed when the alarm goes off is the 99%.
+
+### 3. Start Where You Are
+
+It doesn't matter what resources you lack; what matters is what you do with what you currently have.
+
+*Example:* If you want to start a business, don't wait for a loan; start by selling one service or product using the laptop you already own.
+
+### 4. Small Progress Leads to Possibilities
+
+Sustained effort on small tasks eventually creates massive, life-changing opportunities.
+
+*Example:* Learning one new professional skill for 15 minutes a day seems small, but over a year, it makes you the most qualified person for a promotion.
+
+### 5. C.D.S.I.E (Deservingness)
+
+Desires only become reality through Consistent Directed Self-Motivated Intelligent Effort.
+
+*Example:* To get a promotion, you don't just wish for it; you consistently provide value and take initiative without being asked.
+
+### 6. Comfort Zone vs. Growth Zone
+
+Transformation requires a willingness to step through uncomfortable transitions to reach a higher state.
+
+*Example:* Feeling the 'pit in your stomach' before a difficult conversation is the sign you are entering the growth zone.
+
+### 7. Altitudinal Breakthrough
+
+Attitudes, once shaped, become behaviors that either build your life or destroy it.
+
+*Example:* If you cultivate an attitude of 'the world is against me,' you will subconsciously sabotage every helpful hand offered to you.
+
+### 8. Co-author of Destiny
+
+You are the co-author of your path; the beliefs you hold at the start define the outcome.
+
+*Example:* Starting a marriage believing 'it probably won't last' ensures that you won't put in the effort required to save it when things get tough.
+
+### 9. Total Responsibility
+
+Life is your responsibility; blaming others is a leak in your power.
+
+*Example:* When a project fails, instead of blaming the economy, you ask, 'What could I have done differently to prepare?'.
+
+### 10. Direction of Intelligence
+
+What you manifest is determined by where you focus your intellectual energy.
+
+*Example:* Using your intelligence to solve a recurring problem at home rather than using it to win an argument about who caused the problem.
+
+### 11. Dynamic Acceptance (A.C.R.)
+
+Accept the unchangeable, change the changeable, and remove yourself from the unacceptable.
+
+*Example:* Accepting your height, changing your fitness level, and leaving a relationship where there is no respect.
+
+---
 
 ## 11 Ways to Experience the Bliss of Love
 
-1. Happiness is the only way; while the doors of love don't guarantee happiness, the doors of happiness guarantee love.
-2. Love is a giving emotion; enter relationships focusing on what you can give rather than what you can receive.
-3. When ego comes, everything else goes; when ego goes, everything else comes.
-4. Drop hurt by forgiving others and drop guilt by forgiving myself.
-5. Intelligence is impaired when emotions run high; abstain from action or decisions until emotions settle.
-6. All relationships involve trade-offs where not all expectations will be fulfilled or remain unfulfilled.
-7. Quality of life depends on the clarity of choosing trade-offs — knowing when to be a choice-maker and when to be a consequence-receiver.
-8. Deep relationships require non-negotiables: quality time, empathetic conversations, and explicit expressions.
-9. Life feels beautiful only when you feel beautiful about yourself, which is achieved by making others feel beautiful.
-10. Take 'You-Turns' and take charge; it is not a question of whose mistake it is, but a question of whose life it is.
-11. On the path to divinity, love leads to peace, peace leads to silence, and silence leads to the Divine.
+**Transform your relationships from transactions into deep, enlivening connections.**
+
+### 1. Happiness Guarantees Love
+
+Love doesn't make you happy; being a happy person is what makes love possible.
+
+*Example:* Finding joy in your own hobbies first so you don't look to your partner to be your only source of entertainment.
+
+### 2. Giving Over Receiving
+
+Love is a giving emotion; enter relationships focusing on what you can contribute.
+
+*Example:* Instead of waiting for a 'thank you,' find satisfaction in the act of making your spouse's favorite meal.
+
+### 3. Ego vs. Everything
+
+When ego enters a room, love leaves; when ego leaves, everything else comes.
+
+*Example:* Apologizing first after a fight, even if you were only 10% wrong, just to preserve the connection.
+
+### 4. Forgiveness
+
+Drop hurt by forgiving others and drop guilt by forgiving myself.
+
+*Example:* Letting go of a grudge against a friend from years ago so you can finally stop replaying that pain in your head.
+
+### 5. Wait for Emotions to Settle
+
+Intelligence is impaired when emotions are high; abstain from decisions until you are calm.
+
+*Example:* Putting your phone away when you're angry so you don't send a text that ends a five-year friendship in five seconds.
+
+### 6. Relationship Trade-offs
+
+Relationships come with trade-offs; some expectations will be met, others won't.
+
+*Example:* Accepting that your partner is messy but kind, rather than constantly fighting to make them 'perfect'.
+
+### 7. Choice-maker vs. Consequence-receiver
+
+Clarity in life comes from knowing when you are making a choice and when you are receiving its consequence.
+
+*Example:* If you choose to work long hours for a promotion, you must accept the consequence of less leisure time without complaining.
+
+### 8. The Non-negotiables
+
+Quality time, empathy, and explicit expressions are required for deep bonds.
+
+*Example:* Actually saying 'I appreciate how hard you work' out loud rather than assuming they already know it.
+
+### 9. Make Others Feel Beautiful
+
+Life feels beautiful when you make others feel beautiful about themselves.
+
+*Example:* Giving a sincere compliment to a stranger or coworker and watching their day brighten, which in turn brightens yours.
+
+### 10. Take 'You-Turns'
+
+It's not about whose mistake it was, but whose life it is; take charge.
+
+*Example:* Instead of waiting for your sibling to call and apologize, you call them because you value the relationship more than the 'win'.
+
+### 11. Path to Divinity
+
+Love leads to peace, peace to silence, and silence to the Divine.
+
+*Example:* Creating such a harmonious environment at home that your mind finally feels quiet enough to meditate or pray.
+
+---
 
 ## 11 Ways to be Spiritually Aligned
 
-1. Flow with life by faithfully executing choices and gratefully accepting the consequences.
-2. Live your life centered on Prem (Love), Sat (Truth), Chit (Consciousness), and Anand (Bliss).
-3. Be selfless and unconditional, subordinating your personal likes and dislikes to the purpose of your life.
-4. Gratitude is the mother of all virtues and cannot coexist with disturbance.
-5. Understand the spiritual chain: gratitude births love, love births devotion, and faith births surrender.
-6. Miracles happen through the power of faith.
-7. Faith is the vehicle that brings God into your life.
-8. Success is a miraculous combination of the power of the object, your intelligent effort, and your faith in the energy.
-9. The bigger the goal and the nobler the ideal, the stronger the motivation and the deeper the faith.
-10. Derive the energy for your 'doing' by connecting to your faith — a state of peace and silence.
-11. Find happiness in small things, strive for success in big things, and experience divinity in all things through surrender and meditation.
+**Flow with life and stay centered in truth and gratitude.**
+
+### 1. Flow with Life
+
+Faithfully execute your choices and gratefully accept whatever consequences follow.
+
+*Example:* Applying for your dream job with total effort, but accepting a 'no' with the belief that a better fit is coming.
+
+### 2. Prem, Sat, Chit, Anand
+
+Center your existence on Love, Truth, Consciousness, and Bliss.
+
+*Example:* Basing a business decision on what is truthful (Sat) rather than what is just most profitable.
+
+### 3. Selfless Purpose
+
+Subordinate your personal likes and dislikes to the purpose of your life.
+
+*Example:* Waking up early to volunteer even though you 'like' sleeping in, because your purpose is to serve.
+
+### 4. Gratitude as a Virtue
+
+Gratitude is the mother of all virtues and cannot coexist with mental disturbance.
+
+*Example:* When you are stuck in traffic, listing things you are thankful for to stop the 'disturbance' of road rage.
+
+### 5. The Spiritual Chain
+
+Gratitude births love, love births devotion, and faith births surrender.
+
+*Example:* Starting your day with thanks, which makes you feel more loving toward your family, eventually leading to a deeper faith in life.
+
+### 6. Power of Faith
+
+Miracles happen when you operate from a state of total faith.
+
+*Example:* Taking a leap into a new career because you have faith in your abilities, and watching unexpected doors open for you.
+
+### 7. Faith Brings God
+
+Faith is the vehicle that brings a divine presence into your daily experience.
+
+*Example:* When facing a health crisis, using faith to feel a sense of peace that transcends the medical data.
+
+### 8. Miraculous Combination
+
+Success is the power of the object + intelligent effort + faith in the energy.
+
+*Example:* Studying hard for an exam (effort) while maintaining total faith that you will recall the right information (energy).
+
+### 9. Nobler Ideals
+
+The bigger the goal and nobler the ideal, the stronger the motivation and the deeper the faith.
+
+*Example:* Working to build a charity for orphans provides a level of 'energy' that working just for a paycheck never could.
+
+### 10. Energy from Silence
+
+Derive energy for your actions by connecting to faith, peace, and silence.
+
+*Example:* Taking ten minutes of silence before a high-stakes presentation to find your center and speak with power.
+
+### 11. Divinity in All Things
+
+Find happiness in small things, success in big things, and divinity in all things through surrender.
+
+*Example:* Appreciating a simple sunset (small thing) while surrendering your largest life fears to meditation (all things).
+
+---
+
+## Implementation Strategy
+
+Follow one principle for 21 days. Start with 'Accelerate Transformation' or 'Bliss of Love'. Move to 'Spiritually Aligned' only once the others are integrated into your daily actions.
 `,
   },
 ];
@@ -418,14 +605,18 @@ export default function ReviewPage({ params }: { params: { slug: string } }) {
 
             {/* Article — 2/3 */}
             <div className="min-w-0 flex-[2]">
-              <article className="prose prose-sm max-w-none
-                prose-headings:font-heading prose-headings:text-[var(--color-primary)] prose-headings:font-bold
-                prose-p:font-body prose-p:text-[var(--color-text)] prose-p:leading-[1.75]
-                prose-a:text-[var(--color-secondary)] prose-a:no-underline hover:prose-a:underline
-                prose-li:text-[var(--color-text)] prose-li:font-body
-                prose-hr:border-[var(--color-border)]
-              ">
-                <ReactMarkdown>{review.content}</ReactMarkdown>
+              <article>
+                {isBlogPost && review.slug === "path-to-personal-transformation" ? (
+                  <TransformationBlogContent />
+                ) : (
+                  <div className="prose max-w-none
+                    prose-headings:font-heading prose-headings:text-[var(--color-primary)] prose-headings:font-bold
+                    prose-p:font-body prose-p:text-[var(--color-text)]
+                    prose-li:text-[var(--color-text)] prose-li:font-body
+                  ">
+                    <ReactMarkdown>{review.content}</ReactMarkdown>
+                  </div>
+                )}
               </article>
 
               <CommentSection slug={review.slug} />

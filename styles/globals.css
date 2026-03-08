@@ -137,29 +137,162 @@
   .text-balance { text-wrap: balance; }
 }
 
-/* ── Prose overrides for review article body ─────────────────────────────── */
+/* ── Premium Editorial Prose Styling ─────────────────────────────────────── */
+.prose {
+  font-size: 1.0625rem;
+}
+
+.prose p {
+  line-height: 1.8;
+  margin: 1.75rem 0 !important;
+  letter-spacing: -0.005em;
+}
+
+.prose h2 {
+  font-size: 1.875rem;
+  margin-top: 2.75rem !important;
+  margin-bottom: 1.25rem !important;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--color-secondary);
+  position: relative;
+}
+
+.prose h2::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 3.5rem;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-secondary) 0%, var(--color-mint) 100%);
+  border-radius: 1px;
+}
+
+.prose h3 {
+  font-size: 1.25rem;
+  margin-top: 1.75rem !important;
+  margin-bottom: 0.875rem !important;
+  color: var(--color-primary);
+}
+
+.prose ul, .prose ol {
+  margin: 1.5rem 0 !important;
+}
+
+.prose li {
+  margin: 0.625rem 0 !important;
+  line-height: 1.8;
+}
+
 .prose blockquote {
-  border-left: 3px solid var(--color-secondary) !important;
+  border-left: 4px solid var(--color-secondary) !important;
   border-top: none !important;
   border-right: none !important;
   border-bottom: none !important;
-  background-color: var(--color-bg-soft);
-  padding: 0.75rem 1.25rem !important;
-  margin: 1.5rem 0 !important;
-  border-radius: 0 3px 3px 0;
+  background: linear-gradient(135deg, var(--color-bg-soft) 0%, rgba(116, 242, 206, 0.05) 100%);
+  padding: 1.5rem 1.75rem !important;
+  margin: 2rem 0 !important;
+  border-radius: 0 6px 6px 0;
   font-style: italic;
   color: var(--color-primary) !important;
+  position: relative;
+}
+
+.prose blockquote::before {
+  content: '"';
+  position: absolute;
+  top: -0.5rem;
+  left: 1.5rem;
+  font-size: 3rem;
+  color: var(--color-mint);
+  opacity: 0.15;
+  font-family: "Playfair Display", serif;
 }
 
 .prose blockquote p {
   margin: 0 !important;
   font-family: "Inter", sans-serif;
-  font-size: 0.9375rem;
-  line-height: 1.65;
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  position: relative;
+  z-index: 1;
 }
 
-.prose h2 {
-  padding-bottom: 0.35rem;
-  border-bottom: 1px solid var(--color-border);
-  margin-top: 2rem !important;
+.prose blockquote p:first-child {
+  margin-top: 0 !important;
+}
+
+.prose blockquote p:last-child {
+  margin-bottom: 0 !important;
+}
+
+.prose strong {
+  font-weight: 700;
+  color: var(--color-secondary);
+}
+
+.prose em {
+  font-style: italic;
+  color: var(--color-muted);
+}
+
+.prose a {
+  color: var(--color-secondary);
+  text-decoration: underline;
+  text-decoration-color: var(--color-secondary);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+  transition: all 0.3s ease;
+}
+
+.prose a:hover {
+  color: var(--color-primary);
+  text-decoration-color: var(--color-primary);
+  background-color: rgba(116, 242, 206, 0.1);
+  padding: 0 4px;
+  border-radius: 2px;
+}
+
+.prose hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-border), transparent);
+  margin: 3rem 0 !important;
+}
+
+.prose code {
+  background-color: var(--color-bg-soft);
+  color: var(--color-primary);
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.9375rem;
+  font-family: "Courier New", monospace;
+  border: 1px solid var(--color-border);
+}
+
+.prose pre {
+  background-color: var(--color-bg-soft);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 1.5rem !important;
+  margin: 2rem 0 !important;
+  overflow-x: auto;
+}
+
+.prose pre code {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: var(--color-primary);
+}
+
+/* Decorative first letter for opening paragraphs */
+.prose > p:first-of-type::first-letter {
+  font-size: 2.5rem;
+  font-weight: 700;
+  float: left;
+  line-height: 0.8;
+  padding-right: 0.5rem;
+  color: var(--color-secondary);
+  font-family: "Playfair Display", serif;
 }

@@ -95,7 +95,7 @@ const REVIEWS: Review[] = [
     summary: "33 principles across transformation, love, and spiritual alignment — a distilled guide to living with purpose, depth, and surrender.",
     tags: ["Self-Help", "Spirituality", "Philosophy"],
     type: "blog",
-    content: "",
+    content: "Placeholder - see blog detail page for full content",
   },
 ];
 
